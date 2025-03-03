@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style index.css">
+     <!--font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="assest/logo.jpg" alt="RenewEarthSolutions Logo">
+            </div>
+            <nav>
+                <div class="menu-btn">
+                    <i class="fa-solid fa-bars"></i>
+                    </div>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li> <a href="about.html">About</a></li>
+                    <li>
+                        <a href="servicess.html">Services</a>
+                        <ul class="dropdown">
+                            <li><a href="service1">Service 1</a></li>
+                            <li><a href="service2">Service 2</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="process.html">Process</a>
+                        <ul class="dropdown">
+                            <li><a href="step1">Step 1</a></li>
+                            <li><a href="step2">Step 2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="sustanability.html">Sustainability</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+    
+        <section class="hero">
+            <div class="hero-overlay">
+                <h1>Turning Waste into Resources – One Step at a Time!</h1>
+                <a href="contact.html" class="cta-button">Join the Green Revolution!</a>
+            </div>
+            </section>
+    
+            <section class="introduction">
+                <h2>Welcome to RenewEarthSolutions</h2>
+                <p>We are committed to transforming waste into valuable resources through sustainable and innovative recycling solutions. Our mission is to create a cleaner, greener planet for future generations.</p>
+            </section>
+            
+            <section class="core-services">
+                <h2>Our Core Services</h2>
+                <div class="services-container">
+                    <div class="service">
+                        <img src="assest/waste collection icon.avif" alt="Waste Collection Icon">
+                        <h3>Waste Collection</h3>
+                        <p>Efficient collection of recyclable waste from various sources.</p>
+                    </div>
+                    <div class="service">
+                        <img src="assest/sanitization icon.avif" alt="Sanitization Icon">
+                        <h3>Sanitization</h3>
+                        <p>Thorough cleaning and preparation of collected materials.</p>
+                    </div>
+                    <div class="service">
+                        <img src="assest/separation-icon.avif" alt="Separation Icon">
+                        <h3>Separation</h3>
+                        <p>Advanced sorting of materials for optimal recycling.</p>
+                    </div>
+                    <div class="service">
+                        <img src="assest/granules-production1-icon.avif" alt="Granules Production Icon">
+                        <h3>Granules Production</h3>
+                        <p>Converting processed waste into reusable granules.</p>
+                    </div>
+                </div>
+            </section>
+            
+    
+            <section class="counter-section">
+                <h2>Statistics Section</h2>
+                <div class="counter-container">
+                <div>
+                    <p>Total Waste Processed</p>
+                    <p class="counter" id="wasteCounter">0</p>
+                </div>
+                <div>
+                    <p>Tons of Plastic Recycled</p>
+                    <p class="counter" id="plasticCounter">0</p>
+                </div>
+                <div>
+                    <p>Energy Savings Achieved</p>
+                    <p class="counter" id="energyCounter">0</p>
+                </div>
+                </div>
+            </section>
+        
+            <section class="testimonials">
+                <div class="testimonial-container">
+                    <div class="testimonial-item active">
+                        <p>"Amazing service! Highly recommended."</p>
+                        <p class="stars">★★★★★</p>
+                        <img src="assest/client2.avif" alt="Client 2" class="testimonial-img">
+                    </div>
+                    <div class="testimonial-item">
+                        <p>"Great impact on sustainability!"</p>
+                        <p class="stars">★★★★☆</p>
+                        <img src="assest/separation-icon.avif" alt="separation-icon" >
+                    </div>
+                   
+                </div>
+                <button class="prev" onclick="prevTestimonial()">&#10094;</button>
+                <button class="next" onclick="nextTestimonial()">&#10095;</button>
+            </section>
+            <script>
+                let currentIndex = 0;
+                const testimonials = document.querySelectorAll(".testimonial-item");
+            
+                function showTestimonial(index) {
+                    testimonials.forEach((item, i) => {
+                        item.classList.toggle("active", i === index);
+                    });
+                }
+            
+                function nextTestimonial() {
+                    currentIndex = (currentIndex + 1) % testimonials.length;
+                    showTestimonial(currentIndex);
+                }
+            
+                function prevTestimonial() {
+                    currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+                    showTestimonial(currentIndex);
+                }
+            </script>
+            
+        
+            <div class="buttons">
+                <a href="about.html" class="btn">Learn More</a>
+                <a href="contact.html" class="btn">Contact Us</a>
+            </div>
+        <footer>
+            <p class="footer-links">
+                <a href="#home">Home</a> | 
+                <a href="#about">About</a> | 
+                <a href="#services">Services</a> | 
+                <a href="#contact">Contact</a>
+            </p>
+            <p>Contact: info@renewearthsolutions.com | Phone: +123 456 7890</p>
+            <p>&copy; 2025 RenewEarthSolutions. All Rights Reserved.</p>
+        </footer>
+    </body>
+    </html>
+    
+  

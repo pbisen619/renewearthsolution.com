@@ -1,0 +1,200 @@
+
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+/* Header Styles */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: #2c3e50;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    color: white;
+}
+.logo img {
+    height: 50px;
+}
+/* Navigation Styles */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+nav ul li {
+    position: relative;
+}
+nav ul li a {
+    text-decoration: none;
+    padding: 10px 20px;
+    color: white;
+    display: block;
+    margin-right: 10px;
+}
+nav ul li:hover > a {
+    background: #34495e;
+}
+
+/* Dropdown Menu Styles */
+.dropdown {
+    display: none;
+    position: absolute;
+    background: #2c3e50;
+    min-width: 150px;
+}
+.dropdown li {
+    width: 100%;
+}
+nav ul li:hover .dropdown {
+    display: block;
+}
+/* Responsive Design */
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+    nav ul li {
+        width: 100%;
+    }
+    nav ul li a {
+        padding: 10px;
+        display: block;
+        width: 100%;
+    }
+    .dropdown {
+        position: static;
+        display: none;
+        width: 100%;
+    }
+    nav ul li:hover .dropdown {
+        display: block;
+    }
+}
+
+/* Mobile Devices (max-width: 768px) */
+@media screen and (max-width: 480px) {
+    .logo img {
+        height: 40px;
+    }
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+    nav ul li a {
+        font-size: 14px;
+        padding: 8px;
+    }
+    .dropdown {
+        width: 100%;
+        position: static;
+    }
+    .dropdown li {
+        text-align: center;
+    }
+}
+
+
+.about-us {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #becac3;
+}
+.about-us h1 {
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+.about-us section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background: #b3e0c7;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/*company background*/
+.company-background p{
+    font-size: 1.3em;
+    color: #0c0c0c;
+}
+/*core values*/
+.core-values ul {
+    list-style-type: none;
+    padding: 0;
+}
+.core-values li {
+    font-size: 1.3em;
+    color: #212222;
+    margin: 5px 0;
+}
+/*leadership*/
+.team-section {
+    padding: 50px 20px;
+}
+.team-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.team-member {
+    background: white;
+    margin: 15px;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.team-member h3 {
+    margin: 10px 0;
+    font-size: 20px;
+}
+.team-member p {
+    color: gray;
+}
+    
+/*achievement*/
+.achievements ul {
+    list-style-type: none;
+    padding: 0;
+}
+.achievements li {
+    font-size: 1.3em;
+    color: #2876a7;
+    margin: 5px 0;
+}
+.achievements a {
+    color: #007bff;
+    text-decoration: none;
+}
+.achievements p{
+    font-size: 1.2rem;
+}
+
+.achievements a:hover {
+    text-decoration: underline;
+}
