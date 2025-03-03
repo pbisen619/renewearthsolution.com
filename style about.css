@@ -112,89 +112,219 @@ nav ul li:hover .dropdown {
     }
 }
 
-
+/* About Us Section Styling */
 .about-us {
     text-align: center;
     padding: 50px 20px;
-    background-color: #becac3;
+    background: rgb(162, 169, 164);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
 }
+
 .about-us h1 {
-    font-size: 2.5em;
+    font-size: 2.5rem;
     color: #2c3e50;
     margin-bottom: 20px;
 }
-.about-us section {
-    margin-bottom: 40px;
+
+.about-us h2 {
+    font-size: 2rem;
+    color: #646b69;
+    margin-bottom: 10px;
+}
+
+.about-us p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.company-background, .core-values {
+    background: #fff;
     padding: 20px;
-    background: #b3e0c7;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+    animation: slideIn 1s ease-in-out;
 }
-/*company background*/
-.company-background p{
-    font-size: 1.3em;
-    color: #0c0c0c;
-}
-/*core values*/
+
 .core-values ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
 }
+
 .core-values li {
-    font-size: 1.3em;
-    color: #212222;
-    margin: 5px 0;
+    font-size: 1.2rem;
+    padding: 10px;
+    background: #1abc9c;
+    color: white;
+    margin: 5px;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
 }
-/*leadership*/
+
+.core-values li:hover {
+    transform: scale(1.1);
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Slide-in animation */
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+
+/* Team Section Styling */
 .team-section {
+    text-align: center;
     padding: 50px 20px;
+    background: #b3e0c7;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
 }
+
+.team-section h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
 .team-container {
     display: flex;
     justify-content: center;
+    gap: 30px;
     flex-wrap: wrap;
 }
+
 .team-member {
-    background: white;
-    margin: 15px;
+    background: #f4f1f1;
     padding: 20px;
-    width: 250px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+    max-width: 200px;
+    transition: transform 0.3s ease-in-out;
+    opacity: 0;
+    animation: slideUp 1s ease-in-out forwards;
 }
+
 .team-member img {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    object-fit: cover;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+
 .team-member h3 {
-    margin: 10px 0;
-    font-size: 20px;
+    font-size: 1.5rem;
+    color: #1abc9c;
 }
+
 .team-member p {
-    color: gray;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.team-member:hover {
+    transform: scale(1.1);
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Slide-up animation for team members */
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
 }
     
-/*achievement*/
+/* Achievements Section Styling */
+.achievements {
+    text-align: center;
+    padding: 50px 20px;
+    background: #eef9f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+}
+
+.achievements h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    animation: slideIn 1s ease-in-out;
+}
+
 .achievements ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
 }
+
 .achievements li {
-    font-size: 1.3em;
-    color: #2876a7;
-    margin: 5px 0;
-}
-.achievements a {
-    color: #007bff;
-    text-decoration: none;
-}
-.achievements p{
     font-size: 1.2rem;
+    padding: 10px;
+    background: #1abc9c;
+    color: white;
+    margin: 10px auto;
+    border-radius: 5px;
+    max-width: 600px;
+    transition: transform 0.3s ease-in-out;
+    opacity: 0;
+    animation: slideUp 1s ease-in-out forwards;
+}
+
+.achievements li:hover {
+    transform: scale(1.05);
+}
+
+.achievements p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in forwards;
+}
+
+.achievements a {
+    color: #1abc9c;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .achievements a:hover {
     text-decoration: underline;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Slide-up animation for list items */
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Slide-in animation for headings */
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
 }
