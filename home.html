@@ -44,24 +44,45 @@
         </header>
 
         <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                const menuBtn = document.querySelector(".menu-btn");
-                const menu = document.querySelector(".menu");
-                const menuLinks = document.querySelectorAll(".menu li a");
+    document.addEventListener("DOMContentLoaded", function () {
+        let links = document.querySelectorAll(".menu li a");
+        let currentURL = window.location.pathname.split("/").pop(); // Get current page file name
+
+        links.forEach(link => {
+            if (link.getAttribute("href") === currentURL || (currentURL === "" && link.getAttribute("href") === "home.html")) {
+                link.classList.add("active"); // Add active class
+            }
+        });
+         // Mobile Menu Toggle
+         let menuBtn = document.querySelector(".menu-btn");
+                let menu = document.querySelector(".menu");
         
-                // Toggle menu on menu button click
                 menuBtn.addEventListener("click", function () {
-                    menu.classList.toggle("active");
-                });
-        
-                // Hide menu when a menu link is clicked (for mobile)
-                menuLinks.forEach(link => {
-                    link.addEventListener("click", function () {
-                        menu.classList.remove("active");
-                    });
+                    menu.classList.toggle("show");
                 });
             });
-        </script>
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const menuBtn = document.querySelector(".menu-btn");
+        const menu = document.querySelector(".menu");
+        const menuLinks = document.querySelectorAll(".menu li a");
+
+        // Toggle menu on menu button click
+        menuBtn.addEventListener("click", function () {
+            menu.classList.toggle("active");
+        });
+
+        // Hide menu when a menu link is clicked (for mobile)
+        menuLinks.forEach(link => {
+            link.addEventListener("click", function () {
+                menu.classList.remove("active");
+            });
+        });
+    });
+</script>
+
+
         
     
         <section class="hero">

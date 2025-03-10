@@ -45,6 +45,25 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
+            let links = document.querySelectorAll(".menu li a");
+            let currentURL = window.location.pathname.split("/").pop(); // Get current page file name
+    
+            links.forEach(link => {
+                if (link.getAttribute("href") === currentURL || (currentURL === "" && link.getAttribute("href") === "home.html")) {
+                    link.classList.add("active"); // Add active class
+                }
+            });
+             // Mobile Menu Toggle
+             let menuBtn = document.querySelector(".menu-btn");
+                let menu = document.querySelector(".menu");
+        
+                menuBtn.addEventListener("click", function () {
+                    menu.classList.toggle("show");
+                });
+            });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
             const menuBtn = document.querySelector(".menu-btn");
             const menu = document.querySelector(".menu");
             const menuLinks = document.querySelectorAll(".menu li a");
