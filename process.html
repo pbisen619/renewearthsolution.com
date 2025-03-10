@@ -5,15 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>process</title>
     <link rel="stylesheet" href="style process.css">
+     <!--font awesome-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body>
     <header>
+        <div class="navbar">
+            <div class="max-width">
         <div class="logo">
-            <img src="assest/logo.jpg" alt="RenewEarthSolutions Logo">
+            <a href="#"><img src="assest/logo.jpg" alt="RenewEarthSolutions Logo"></a>
         </div>
-        <nav>
-            <ul>
-                <li><a href="home.html">Home</a></li>
+            <div class="menu-btn">
+                <i class="fa-solid fa-bars"></i>
+                </div>
+            <ul class="menu">
+                <li><a href="home.html" class="menu-active">Home</a></li>
                 <li> <a href="about.html">About</a></li>
                 <li>
                     <a href="servicess.html">Services</a>
@@ -32,8 +39,29 @@
                 <li><a href="sustanability.html">Sustainability</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
+            </div>
         </nav>
     </header>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuBtn = document.querySelector(".menu-btn");
+            const menu = document.querySelector(".menu");
+            const menuLinks = document.querySelectorAll(".menu li a");
+    
+            // Toggle menu on menu button click
+            menuBtn.addEventListener("click", function () {
+                menu.classList.toggle("active");
+            });
+    
+            // Hide menu when a menu link is clicked (for mobile)
+            menuLinks.forEach(link => {
+                link.addEventListener("click", function () {
+                    menu.classList.remove("active");
+                });
+            });
+        });
+    </script>
+    
 
     <section id="process" class="Process">
         <div class="process-container">
@@ -66,6 +94,17 @@
            </div>
         </div>
         </section>
+
+        <footer>
+            <p class="footer-links">
+                <a href="#home">Home</a> | 
+                <a href="#about">About</a> | 
+                <a href="#services">Services</a> | 
+                <a href="#contact">Contact</a>
+            </p>
+            <p>Contact: info@renewearthsolutions.com | Phone: +123 456 7890</p>
+            <p>&copy; 2025 RenewEarthSolutions. All Rights Reserved.</p>
+        </footer>
 
     
 </body>
